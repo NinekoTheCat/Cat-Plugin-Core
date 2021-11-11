@@ -1,7 +1,6 @@
-package ninekothecat.catplugincore.money.interfaces;
-@SuppressWarnings("unused")
-public interface ICurrencyPrefix {
-        String getShortPrefix();
+package ninekothecat.catplugincore.money.interfaces
 
-        String getLongPrefix();
+interface ICurrencyPrefix {
+    val shortPrefix: String
+    val longPrefix: String
 }

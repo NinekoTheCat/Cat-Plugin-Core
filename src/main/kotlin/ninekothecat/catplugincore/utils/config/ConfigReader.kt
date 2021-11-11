@@ -1,16 +1,13 @@
-package ninekothecat.catplugincore.utils.config;
+package ninekothecat.catplugincore.utils.config
 
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.Plugin;
+import org.bukkit.configuration.file.YamlConfiguration
+import org.bukkit.plugin.Plugin
+import java.io.File
 
-import java.io.File;
-
-public class ConfigReader {
-    public static YamlConfiguration loadConfigurationFromDataFolder(String file, Plugin self) {
-        File file1 = new File(self.getDataFolder(), file);
+    fun loadConfigurationFromDataFolder(file: String, self: Plugin): YamlConfiguration {
+        val file1 = File(self.dataFolder, file)
         if (!file1.exists()) {
-            self.saveResource(file, false);
+            self.saveResource(file, false)
         }
-        return YamlConfiguration.loadConfiguration(file1);
+        return YamlConfiguration.loadConfiguration(file1)
     }
-}
