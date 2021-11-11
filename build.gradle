@@ -1,4 +1,5 @@
 plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
     id 'java-library'
 }
 
@@ -15,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31'
     compileOnlyApi group: 'org.bukkit', name: 'bukkit', version: '1.12-R0.1-SNAPSHOT'
     compileOnlyApi group: 'com.github.MilkBowl', name: 'VaultAPI', version: '1.7'
 }
